@@ -27,6 +27,7 @@ public class Launcher {
             } else if (args[0].equals("-auto") && (isNum)) {
                 Player computerplayer = new ComputerPlayer();
                 Simulation simulation = new Simulation(computerplayer);
+                simulation.initialize(Long.parseLong(args[1]));
                 simulation.loopUntilPlayerSucceed(1000);
             }
         }

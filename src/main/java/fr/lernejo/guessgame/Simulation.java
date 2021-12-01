@@ -48,9 +48,9 @@ public class Simulation {
             limite++;
         }
         duree = System.currentTimeMillis() - duree;
-        if(stop) System.out.println("Le joueur a trouvé la solution avant la limite d'interaction");
-        else System.out.println("Le joueur n' a pas trouvé la solution avant d'atteindre la limite d'interaction");
-        System.out.println("\nNombre de secondes: "+duree);
+        if(stop) System.out.println("Le joueur a trouvé la solution"+numberToGuess+" avant la limite d'interaction");
+        else System.out.println("Le joueur n' a pas trouvé la solution "+numberToGuess+" avant d'atteindre la limite d'interaction");
+        System.out.println("\nNombre de milli-secondes: "+duree);
 
     }
 }
