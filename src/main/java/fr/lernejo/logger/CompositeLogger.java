@@ -11,12 +11,12 @@ import static java.nio.file.StandardOpenOption.APPEND;
 import static java.nio.file.StandardOpenOption.CREATE;
 
 public class CompositeLogger implements Logger{
-    final private ContextualLogger delegateLogger;
-    final private FileLogger fileLogger;
+    final private Logger delegateLogger;
+    final private Logger fileLogger;
 
-    public CompositeLogger(String callerClass){
-        delegateLogger = new ContextualLogger(callerClass,new ConsoleLogger());
-        fileLogger = new FileLogger(callerClass,new ConsoleLogger());
+    public CompositeLogger(Logger delegateLogger, Logger fileLogger){
+        this.delegateLogger = delegateLogger;
+        this.fileLogger = fileLogger;
     }
 
 
