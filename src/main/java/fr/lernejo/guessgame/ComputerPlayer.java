@@ -8,7 +8,7 @@ import java.security.SecureRandom;
 public class ComputerPlayer implements Player{
     boolean low=false,high=false,first[]={true,true} ;
 
-    private final Logger logger = LoggerFactory.getLogger("computer");
+    private final Logger logger = LoggerFactory.getLogger2("computer");
     Long prevh,prevb,guess;
     @Override
     public long askNextGuess() {
