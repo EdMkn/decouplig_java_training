@@ -7,7 +7,7 @@ import fr.lernejo.logger.LoggerFactory;
 
 public class Simulation {
 
-    private final Logger logger = LoggerFactory.getLogger2("simulation");
+    private final Logger logger = LoggerFactory.getLogger3("simulation");
     private final Player player;
     private long numberToGuess;
 
@@ -29,11 +29,11 @@ public class Simulation {
         else {
             if (nb < numberToGuess) {
                 player.respond(true);
-  //              logger.log("Le nombre doit être plus grand");
+                logger.log("Le nombre doit être plus grand");
             }
             else {
                 player.respond(false);
-  //              logger.log("Le nombre doit être plus petit");
+                logger.log("Le nombre doit être plus petit");
             }
             return false;
         }

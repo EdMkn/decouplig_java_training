@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class HumanPlayer implements Player {
 
-    private final Logger logger = LoggerFactory.getLogger2("player");
+    private final Logger logger = LoggerFactory.getLogger3("player");
 
     @Override
     public long askNextGuess() {
@@ -19,8 +19,8 @@ public class HumanPlayer implements Player {
 
     @Override
     public void respond(boolean lowerOrGreater) {
-        if(lowerOrGreater) logger.log("Le nombre doit être plus grand");
-        else logger.log("Le nombre doit être plus petit");
+        /*if(lowerOrGreater) logger.log("Le nombre doit être plus grand");
+        else logger.log("Le nombre doit être plus petit");*/
 
     }
 

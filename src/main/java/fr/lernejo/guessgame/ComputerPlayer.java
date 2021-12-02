@@ -8,7 +8,7 @@ import java.security.SecureRandom;
 public class ComputerPlayer implements Player{
     boolean low=false,high=false,first[]={true,true} ;
 
-    private final Logger logger = LoggerFactory.getLogger2("computer");
+    private final Logger logger = LoggerFactory.getLogger3("computer");
     Long prevh,prevb,guess;
     @Override
     public long askNextGuess() {
@@ -29,7 +29,7 @@ public class ComputerPlayer implements Player{
     @Override
     public void respond(boolean lowerOrGreater) {
         if(lowerOrGreater) {
-            logger.log("Le nombre doit être plus grand");
+ //           logger.log("Le nombre doit être plus grand");
             if (first[0]) {
                 this.prevb = this.guess;
                 first[0] = false;
@@ -40,7 +40,7 @@ public class ComputerPlayer implements Player{
 
         }
         else {
-            logger.log("Le nombre doit être plus petit");
+ //           logger.log("Le nombre doit être plus petit");
             if(first[1]){
                 this.prevh=this.guess;
                 first[1] = false;

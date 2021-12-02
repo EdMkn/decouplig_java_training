@@ -5,7 +5,9 @@ public class LoggerFactory {
         return new ContextualLogger(name,new ConsoleLogger());
     }
     public static FileLogger getLogger2(String name){
-        String pathAsString = "C:/Users/ManyimMa/Documents/GitHub/decouplig_java_training/Jeulog.txt";
-        return new FileLogger(pathAsString, name,new ConsoleLogger());
+        return new FileLogger(name,new ConsoleLogger());
+    }
+    public static CompositeLogger getLogger3(String name){
+        return new CompositeLogger(name);
     }
 }
