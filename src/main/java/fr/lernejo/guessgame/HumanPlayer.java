@@ -11,7 +11,7 @@ public class HumanPlayer implements Player {
     @Override
     public long askNextGuess() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Entrez un nombre: ");
+        logger.log("J'entre un nombre: ");
 
         long nb = input.nextLong();
         return nb;
@@ -19,8 +19,8 @@ public class HumanPlayer implements Player {
 
     @Override
     public void respond(boolean lowerOrGreater) {
-        if(lowerOrGreater) System.out.println("Le nombre doit être plus grand");
-        else System.out.println("Le nombre doit être plus petit");
+        if(lowerOrGreater) logger.log("Le nombre doit être plus grand");
+        else logger.log("Le nombre doit être plus petit");
 
     }
 

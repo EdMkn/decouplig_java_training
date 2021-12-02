@@ -29,18 +29,18 @@ public class Simulation {
         else {
             if (nb < numberToGuess) {
                 player.respond(true);
-                logger.log("Le nombre doit être plus grand");
+  //              logger.log("Le nombre doit être plus grand");
             }
             else {
                 player.respond(false);
-                logger.log("Le nombre doit être plus petit");
+  //              logger.log("Le nombre doit être plus petit");
             }
             return false;
         }
     }
 
-    public void loopUntilPlayerSucceed(long max) {
-        long limite = 0;
+    public void loopUntilPlayerSucceed(int max) {
+        int limite = 0;
         long duree = System.currentTimeMillis();
         boolean stop = this.nextRound();
         while((!stop)&&(limite < max)) {
@@ -48,9 +48,9 @@ public class Simulation {
             limite++;
         }
         duree = System.currentTimeMillis() - duree;
-        if(stop) System.out.println("Le joueur a trouvé la solution"+numberToGuess+" avant la limite d'interaction");
-        else System.out.println("Le joueur n' a pas trouvé la solution "+numberToGuess+" avant d'atteindre la limite d'interaction");
-        System.out.println("\nNombre de milli-secondes: "+duree);
+        if(stop) logger.log("Le joueur a trouvé la solution "+numberToGuess+" avant la limite d'interaction");
+        else logger.log("Le joueur n' a pas trouvé la solution "+numberToGuess+" avant d'atteindre la limite d'interaction");
+        logger.log("\nNombre de milli-secondes: "+ duree);
 
     }
 }

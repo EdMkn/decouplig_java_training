@@ -23,7 +23,7 @@ public class Launcher {
                 Player humanplayer = new HumanPlayer();
                 Simulation simulation = new Simulation(humanplayer);
                 simulation.initialize(new SecureRandom().nextInt(100));
-                simulation.loopUntilPlayerSucceed(Long.MAX_VALUE);
+                simulation.loopUntilPlayerSucceed(Integer.MAX_VALUE);
             } else if (args[0].equals("-auto") && (isNum)) {
                 Player computerplayer = new ComputerPlayer();
                 Simulation simulation = new Simulation(computerplayer);
@@ -35,7 +35,7 @@ public class Launcher {
             Player humanplayer = new HumanPlayer();
             Simulation simulation = new Simulation(humanplayer);
             simulation.initialize(new SecureRandom().nextInt(100));
-            simulation.loopUntilPlayerSucceed(Long.MAX_VALUE);
+            simulation.loopUntilPlayerSucceed(Integer.MAX_VALUE);
 
             Player computerplayer = new ComputerPlayer();
             simulation = new Simulation(computerplayer);
