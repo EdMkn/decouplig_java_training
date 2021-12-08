@@ -3,7 +3,7 @@ package fr.lernejo.logger;
 import java.util.function.Predicate;
 
 public class LoggerFactory {
-    private static String pathAsString = "C:\\Users\\ManyimMa\\Documents\\GitHub\\decouplig_java_training\\Jeulog.txt";
+    private static String pathAsString = "Jeulog.txt";
 
     public static Logger getLogger(String name){
         return new ContextualLogger(name,new ConsoleLogger());
